@@ -1,5 +1,5 @@
 <!--CONTAINERS-->
-<div (swipeLeft)='loadNextTab()' (swipeRight)='loadPreviousTab()' *ngIf="node.question.renderingType === 'form'">
+<div *ngIf="node.question.renderingType === 'form'">
   <md-tab-group (selectChange)='tabSelected($event)' [selectedIndex]='activeTab'>
     <md-tab [label]='question.label' *ngFor="let question of node.question.questions; let i = index;">
       <div (swipeLeft)='loadNextTab()' (swipeRight)='loadPreviousTab()'>
